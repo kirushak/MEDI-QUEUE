@@ -1,0 +1,22 @@
+{
+  "info": { "name": "MediQueue", "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json" },
+  "item": [
+    {
+      "name": "List Slots",
+      "request": { "method": "GET", "header": [], "url": { "raw": "http://localhost:3000/slots", "protocol": "http", "host": ["localhost"], "port": "3000", "path": ["slots"] } }
+    },
+    {
+      "name": "Book Slot",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": { "mode": "raw", "raw": "{\"user_id\":\"u123\",\"seats\":1}" },
+        "url": { "raw": "http://localhost:3000/slots/1/book", "protocol": "http", "host": ["localhost"], "port": "3000", "path": ["slots","1","book"] }
+      }
+    },
+    {
+      "name": "Get Booking",
+      "request": { "method": "GET", "url": { "raw": "http://localhost:3000/bookings/<id>", "protocol": "http", "host": ["localhost"], "port": "3000", "path": ["bookings","<id>"] } }
+    }
+  ]
+}
